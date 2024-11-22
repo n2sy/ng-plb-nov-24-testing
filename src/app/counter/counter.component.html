@@ -1,0 +1,10 @@
+<hr />
+
+<button id="increment-btn" (click)="increment()">Increment</button>
+
+<input #inputReset type="number" id="reset-input" />
+<button (click)="resetCounter(inputReset.value)" id="reset-btn">Reset</button>
+
+<h3>
+  Count: <span id="showCount">{{ count }}</span>
+</h3>

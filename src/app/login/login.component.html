@@ -1,0 +1,20 @@
+<h1 id="welcome">
+  @if(authService.isLogged){User Logged} @else {User Not Logged}
+</h1>
+
+@if(authService.isLogged){
+
+<div>
+  <p id="user-name">Hello, {{ authService.user.name }}</p>
+</div>
+
+<button id="btn" (click)="authService.logout()">Logout</button>
+
+} @else{
+<div>
+  <p id="login-msg">please Log in first</p>
+</div>
+
+<button id="btn" (click)="authenticate()">Sign in</button>
+
+}
